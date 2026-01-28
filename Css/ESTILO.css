@@ -1,0 +1,376 @@
+﻿:root {
+    --primary: #2c3e50;    /* Azul oscuro */
+    --accent: #3498db;     /* Azul brillante para acciones */
+    --danger: #e74c3c;     /* Rojo para denuncias */
+    --bg-body: #f4f6f8;    /* Gris muy claro de fondo */
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+    --radius: 8px;         /* Bordes redondeados */
+}
+
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+/* --- HEADER (BARRA DE NAVEGACIÓN) --- */
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; /* Se queda fijo al bajar */
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Control estricto del logo para que no rompa el diseño */
+#main-logo {
+    height: 50px; 
+    width: auto;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* --- HERO SECTION (INTRODUCCIÓN) --- */
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, rgb(51, 73, 94) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.seccion-contenedor {
+    background: linear-gradient(135deg, #27aecf 0%, #12af54 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h3.section-title {
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+h3.section-title-center {
+    text-align: center;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+/* --- TARJETAS DE INFOGRAFÍAS (GRID MEJORADO) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive automático */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease; /* Efecto de elevación */
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Se levanta al pasar el mouse */
+}
+
+.icon-placeholder {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: #eef2f7;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+
+.btn-download {
+    display: block;
+    width: 100%;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-download:hover {
+    background: #2980b9;
+}
+
+/* --- CONTACTO DE EMERGENCIA --- */
+.alert-box {
+    background: #fff0f0;
+    border: 1px solid #ffcccc;
+    padding: 20px;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-alert {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* --- BUSCADOR LEGAL --- */
+.search-container {
+      margin-bottom: 20px;
+}
+
+#buscadorLegal {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 50px; /* Borde redondo */
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#buscadorLegal:focus {
+    border-color: var(--accent);
+}
+
+.termino-item {
+    background: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 4px solid transparent;
+}
+
+.termino-item:hover {
+    border-left: 4px solid var(--accent);
+}
+
+.termino-titulo {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.termino-vulgar {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.ley-tag {
+    background: #e8f6f3;
+    color: #16a085;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- MOBILE (MEDIA QUERIES) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+}
+/* --- ESTILOS PARA LA SECCIÓN DE LEY COMPLETA (ACORDEÓN) --- */
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ley-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden; /* Para que el contenido no se salga al animar */
+    border-left: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Efecto cuando se abre */
+.ley-card[open] {
+    border-left: 5px solid var(--accent);
+}
+
+/* El encabezado clickeable */
+.ley-card summary {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none; /* Quita el triángulo feo por defecto */
+    color: var(--primary);
+}
+
+/* Ocultar el marcador por defecto en algunos navegadores */
+.ley-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.ley-card summary:hover {
+    background-color: #f8f9fa;
+}
+
+/* Número del artículo (Etiqueta visual) */
+.art-num {
+    background-color: var(--primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+/* Contenido oculto (Texto de la ley) */
+.ley-content {
+    padding: 0 20px 20px 20px;
+    color: #555;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Animación de la flechita */
+.ley-card[open] .arrow-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+    color: var(--accent);
+}
+
+
+
+/* Contenedor que organiza las dos columnas */
+.contenedor-global {
+    display: flex;
+   max-width: 1200px;
+    margin: 0 auto;
+    gap: 1px; /* Espacio entre el contenido y la barra lateral */
+    padding: 1px;
+}
+
+/* El contenido que ya tenías ocupa el 70% */
+.contenido-principal {
+    flex: 1;
+}
+
+/* La barra lateral ocupa el 30% */
+.sidebar-social {
+    flex: 1;
+    padding: px;
+    border-radius: 5px;
+}
+
+.social-item {
+    margin-bottom: 0px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* --- RESPONSIVE: En celulares se pone uno debajo del otro --- */
+@media (max-width: 900px) {
+    .contenedor-global {
+    flex-direction: column;
+    }
+    .sidebar-social {
+        width: 100%;
+    }
+}
+
+.image-center {
+    display: block; /* Convierte la imagen en un bloque que ocupa toda la línea */
+    margin-left: auto;  /* Empuja desde la izquierda */
+    margin-right: auto; /* Empuja desde la derecha */
+    max-width: 40%;  /* Tamaño de la imagen */
+}
+
+/* Ajustes para el Widget de TikTok */
+.tiktok-embed {
+    margin: 0 auto !important; /* Centra el video */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+    max-width: 100% !important; /* Evita que se salga del ancho de la barra lateral */
+}
