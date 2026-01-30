@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --primary: #2c3e50;    /* Azul oscuro */
     --accent: #3498db;     /* Azul brillante para acciones */
     --danger: #e74c3c;     /* Rojo para denuncias */
@@ -360,17 +360,10 @@ h3.section-title-center {
     }
 }
 
+/* --- Se centran las imagenes --- */
 .image-center {
     display: block; /* Convierte la imagen en un bloque que ocupa toda la línea */
     margin-left: auto;  /* Empuja desde la izquierda */
     margin-right: auto; /* Empuja desde la derecha */
-    max-width: 40%;  /* Tamaño de la imagen */
-}
-
-/* Ajustes para el Widget de TikTok */
-.tiktok-embed {
-    margin: 0 auto !important; /* Centra el video */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
-    max-width: 100% !important; /* Evita que se salga del ancho de la barra lateral */
+    max-width: 250px;  /* Tamaño de la imagen */
 }
